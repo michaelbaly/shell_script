@@ -1,0 +1,9 @@
+#!/bin/bash
+# testing closing file descriptors
+
+exec 3> test17file
+
+echo "This should store in test17file" >&3
+exec 3>&-
+
+echo "this won't work" >&3

@@ -1,0 +1,8 @@
+#!/bin/bash
+# using an alternative file descriptor
+
+exec 3>> test13_out
+
+echo "This is the start of the script"
+echo "and this should be stored in test13_out file" >&3
+echo "Then this should be back on the monitor"

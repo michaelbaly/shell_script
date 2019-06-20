@@ -1,0 +1,11 @@
+#!/bin/bash
+# while command test
+
+var=10
+
+while echo $var 
+    [ $var -gt 0 ]
+do
+    echo "$var"
+    var=$[$var - 1]
+done

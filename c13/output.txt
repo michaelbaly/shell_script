@@ -1,0 +1,4 @@
+/home/mike/.bash_history is a file
+/home/mike/.bash_logout is a file
+/home/mike/.bashrc is a file
+/home/mike/lusk doesn't exist
