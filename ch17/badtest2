@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function f1 {
+    tmp=$[$value +5]
+    result=$[$tmp*2]
+}
+
+tmp=4
+value=6
+f1
+echo "The result is $result"
+
+if [ $tmp -gt $value ]
+then
+    echo "tmp is larger"
+else
+    echo "tmp is smaller"
+fi
