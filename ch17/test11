@@ -1,0 +1,17 @@
+#!/bin/bash
+# array variable to function test
+function testit {
+    local sum=0
+    local newarray
+    newarray=(`echo "$@"`)
+    echo "The new array value is: ${newarray[*]}"
+    for value in ${newarray[*]}
+    do
+        sum=$[$sum + $value]
+    done
+    echo $sum
+}
+myarray=(1 2 3 4 5)
+echo "The original array is ${myarray[*]}"
+result=$(testit ${myarray[*]})
+echo "The result is $result"
